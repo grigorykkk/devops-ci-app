@@ -1,12 +1,9 @@
 # devops-ci-app
 
-Учебное Flask-приложение для практической работы № 10.
+Учебное Flask-приложение для практической работы №10.
 
-CI: Pylint → pytest → Docker build → smoke-test → GHCR.
+Pipeline GitHub Actions: lint (Pylint) → test (pytest) → image (сборка Docker-образа, smoke-тест `/health`, публикация в GHCR).
 
-Публикация образа выполняется только из `main`. В Pull Request выполняются
-проверки без push.
+Образ: `ghcr.io/grigorykkk/devops-ci-app` (теги: полный SHA коммита и `latest`).
 
-- health endpoint: `/health`;
-- образ: `ghcr.io/grigorykkk/devops-ci-app`;
-- основной workflow: `.github/workflows/ci.yml`.
+
