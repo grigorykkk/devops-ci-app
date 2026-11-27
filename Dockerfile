@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-RUN echo "Buil failure for demo"
+RUN echo "Buil failure for demo" && exit 1
 LABEL org.opencontainers.image.source="https://github.com/grigorykkk/devops-ci-app"
 LABEL org.opencontainers.image.description="DevOps CI sample application"
 
